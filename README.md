@@ -17,6 +17,7 @@
   
 ![Screenshot 2025-04-16 at 05 01 25](https://github.com/user-attachments/assets/4f0ea314-f019-4a92-8b86-1be5feb117fc)
 
+- Select "AWS AppConfig hosted configuration" in configuration definition
 - Update application related properties in configuration profile using freeform configuration in “yaml” format
 
 ![Screenshot 2025-04-16 at 05 02 01](https://github.com/user-attachments/assets/7fb32050-d5d9-4725-a463-c0ddbb22e7ac)
@@ -32,7 +33,6 @@
 ![Screenshot 2025-04-16 at 05 03 53](https://github.com/user-attachments/assets/042cea81-e12e-4c7f-abdf-43dd231930b2)
 
 - Once the deployment is completed, above details are used in java application and retrieve the properties
-
 
 
 
