@@ -1,12 +1,19 @@
 # Overview
-- The application retrieves application specific properties from an external configuration defined in Aws AppConfig.
-- No properties are defined in application.properties of the spring boot application. Everything is fetched from configuration defined in Aws AppConfig
+- The application retrieves application specific properties from an external configuration defined in AWS AppConfig.
+- No properties are defined in application.properties of the spring boot application. All required application properties are fetched from configuration defined in Aws AppConfig.
+- Data Source bean is created using the properties which are fetched from external configuration defined in AWS AppConfig.
+- Application details are fetched from the properties which are fetched from external configuration defined in AWS AppConfig.
 ## Prerequisites
 - Java 17.0 or more
 - Maven
 - MySQL database / any relational database
 - AWS Account
-### Define application and configuration in AWS App Config
+### Configure AWS Credentials
+- Create an IAM user and generate access keys.
+- Save the "Access Key" and "Secret Key" generated from access keys and configure them AWS profile in local environment/System using AWS CLI
+### Create an IAM role
+- Create an IAM role "mtb-task-exec-role". Attach permissions to access "AWS AppConfig" in the created role.
+### Define application and its configuration in AWS App Config
 - Login to aws console https://aws.amazon.com/console/
 - Navigate to AWS App Config
 - Create an application provide name “ExternalConfig”
@@ -33,7 +40,4 @@
 ![Screenshot 2025-04-16 at 05 03 53](https://github.com/user-attachments/assets/042cea81-e12e-4c7f-abdf-43dd231930b2)
 
 - Once the deployment is completed, above details are used in java application and retrieve the properties
-
-
-
 
